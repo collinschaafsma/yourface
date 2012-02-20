@@ -38,7 +38,8 @@ io.sockets.on('connection', function(client) {
   client.on('capture', function(data) {
     io.sockets.emit('capture', data);
   });
-  client.on('hello', function(data) {
+  client.on('ping', function(data) {
+    console.log(data);
   });
 });
 
